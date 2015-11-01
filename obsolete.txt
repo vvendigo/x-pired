@@ -1,0 +1,44 @@
+
+*** The OBSOLETE
+Levelpack for X-pired containing 10 new levels.
+
+*** Credits:
+Miroslav Kucera [Wendigo]:
+	Burn, Forrest, burn!
+	Think twice.
+	It seems to be a massacre...
+	Fortress?
+	Hurry up!
+	Reactor.
+	Rat race.
+	Shameless self-promotion.
+
+Jakub Drnec [JayDee]:
+	Shooting range
+	Hatchery
+
+Roman Porizka [arTee]:
+	This level sux
+
+
+*** Usage:
+
+To play this levels, run X-pired with
+parameter -l.
+
+Examples:
+
+If you copy obsolete.lvl into the same directory where
+the X-pired resides:
+
+xpired -l obsolete.lvl
+
+If you are using shared X-pired and obsolete.lvl is
+in your home directory:
+
+xpired -l ~/obsolete.lvl
+
+Otherwise:
+
+xpired -l /weird/path/obsolete.lvl
+

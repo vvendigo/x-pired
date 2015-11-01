@@ -1,0 +1,325 @@
+#	Level Definition File for X-pired (xpired.ldx)
+#
+#	Level record:
+#	>---------		- level begin (/^>-+$/)
+#	name=Name		- level name (max 100 chars)		(optional)
+#	password=psw	- level password (max 10 chars)		(optional)
+#	deadline=X		- level deadline (in secs 0-999)	(optional)
+#	background=file	- level background (would be tiled)	(optional)
+#	X=some text		- text message definition (X-text ID (0-9), Text length must by less than 50 chars.)
+#	- Follows 20 lines consisting of 20 chunks ',FfBbXT' (level matrix 20x20) (F-foreground type, f-foreground sprite, B-background type, b-background sprite, X-effector, T-message ID).
+#	- Unrecognized and empty lines or lines beginning with # are ignored.
+#
+#	Level elems:
+#	*...Start position
+#	+...Exit position
+#	c...Crate
+#	o...Barrel
+#	O...HiExplosive
+#	X...Wall
+#	x...Tiny wall
+#	B...BEM
+#	%...Retarder
+#	&...Flamable
+#	@...Hot
+#	#...Ice
+#	T...Teleport
+
+
+>--------------------
+name=Burn, Forrest, burn!
+background=./img/bg-organic.jpg
+,  **0 ,OO&&0 ,XX  0 ,    0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,OO&&0 ,  &&0 ,  &&0 
+,  &&0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,XX  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 
+,  &&02,  &&02,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 ,OO&&0 ,  &&0 ,OO&&0 ,  &&0 ,OO&&0 ,  &&0 ,OO&&0 ,  &&0 ,  &&0 
+,XX  0 ,  &&0 ,XX  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 ,oo  0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,xx  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,OO  0 ,XX  0 ,    0 ,    0 ,BB  0 ,    0 ,XX  0 ,  TT0 ,XX  0 ,    0 ,BB  0 ,    0 ,    0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,xx  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,BB  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,BB  0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,xx  0 ,oo  0 ,XX  0 ,oo  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    01,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 
+,  &&0 ,  &&0 ,oo  0 ,oo  0 ,xx  0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 
+,  &&0 ,  &&0 ,xx  0 ,oo  0 ,XX  0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,xx  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,  TT0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  ++0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 
+,  &&0 ,  &&0 ,XX  0 ,oo  0 ,XX  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 
+,  %%00,  %%00,XX  0 ,oo  0 ,XX  0 ,BB  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,  %%0 ,  %%0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+0=Hmm. What a safe place...
+1=Level is nearly completed...
+2=Flamable everywhere...
+>--------------------
+name=Think twice.
+password=ChroChro
+background=./img/bg-tek.jpg
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,oo  05,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,OO  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,    04,XX  0 ,    0 ,    0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,XX  0 ,    03,    02,    03,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,XX  0 ,    02,  **0 ,    02,XX  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,    0 ,XX  0 ,    03,    02,    03,XX  0 ,XX  0 ,cc  00,XX  0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,  @@0 ,    0 ,  @@0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,cc  0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 
+,    0 ,    0 ,    0 ,    04,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,    0 ,    0 ,oo  05,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,XX  0 ,    0 ,    0 
+,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,XX  0 ,oo  0 ,    0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,  TT0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,  ++0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,    0 ,    0 
+,    0 ,    0 ,    09,    0 ,    0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,  TT01,  @@0 ,    0 ,    0 ,    0 
+,XX  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,    0 ,    0 
+,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,xx  0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,    0 ,    0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+0=I hate this bothersome crates...
+1=All this teleportation makes me sick...
+2=Another interesting puzzle...
+3=It was irony of course.
+4=Barrel - the only friend of mine...
+5=Come on...
+9=OK. I've done it again...
+>--------------------
+name=It seems to be a massacre...
+password=666
+background=./img/bg-metal.jpg
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 
+,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,OO  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 
+,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,OO  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,OO  0 ,    0 ,    0 ,    0 
+,BB  0 ,    0 ,    0 ,    0 ,    0 ,OO  0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 ,    00,XX  0 
+,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    00,oo  0 ,  **0 
+,    0 ,BB  0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    00,    0 ,  ++0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,OO  0 ,    0 ,    0 ,    00,XX  0 
+,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 
+,BB  0 ,    0 ,    0 ,OO  0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,OO  0 ,    0 
+,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,oo  0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,BB  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 
+0=Special menu today: Fried BEM.
+>--------------------
+name=Fortress?
+password=Cootcherah
+background=./img/bg-plate.jpg
+,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 
+,  ##0 ,  %%0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,OO##0 ,  ##0 ,XX  0 ,XX  0 ,  ##0 ,oo##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  %%0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    02,    02,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    02,    02,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,    0 ,    02,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,xx  0 ,    0 ,    0 ,xx  0 ,    0 ,    0 ,  @@0 ,    0 ,    0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,  @@0 ,    0 ,  @@0 ,    0 ,xx  0 ,BB  0 ,BB  0 ,xx  0 ,    0 ,  @@0 ,    0 ,    0 ,  @@0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,xx  0 ,BB  0 ,BB  0 ,xx  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,BB##0 
+,  ##0 ,  ##0 ,XX  0 ,  @@0 ,    0 ,    0 ,  @@0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  @@0 ,    0 ,    0 ,  @@0 ,    0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,    0 ,  @@0 ,  @@0 ,    0 ,    0 ,    0 ,xx  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,xx  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  ##0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  ##0 ,  ##0 
+,  ##0 ,  %%0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  %%0 ,  %%0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  %%0 ,  ##0 
+,  %%0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  %%0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  %%0 
+,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  ##0 ,  ##01,oo##0 ,  ##0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    01,    00,    01,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    01,    00,  **0 ,  ++00,    01,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+0=Open the door!!
+1=In the name of king Arthur!
+2=You bastards!
+>--------------------
+name=Hurry up!
+password=GoGoGo
+background=./img/bg-stone.jpg
+deadline=45
+,    0 ,    0 ,    0 ,    0 ,  &&0 ,xx  05,    0 ,  &&0 ,  &&0 ,    0 ,  &&0 ,  &&0 ,    0 ,  &&0 ,    0 ,    0 ,    0 ,    0 ,  &&0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,  &&0 ,  &&05,  &&0 ,    0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,    0 ,  &&0 ,  &&0 ,    0 ,  &&0 ,    0 ,  &&0 
+,    0 ,    0 ,    0 ,  &&0 ,  &&0 ,xx  05,BB&&0 ,  &&0 ,    0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,    0 
+,    0 ,    0 ,  ++0 ,    0 ,BB&&0 ,  &&05,OO&&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,xx  0 ,OO&&0 ,xx  0 ,xx  0 ,OO&&0 ,xx  0 ,xx  0 ,XX&&0 
+,    0 ,    0 ,    0 ,    0 ,  &&0 ,xx  05,BB&&0 ,    0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,  &&0 ,  &&0 ,  &&05,    0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,  &&0 ,xx  05,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,    0 ,    0 ,  &&0 ,  &&0 ,    0 ,    0 ,    0 ,    0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,    0 ,  &&0 ,  &&0 ,    0 ,  &&0 ,  &&0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  &&0 ,    0 ,  %%0 ,    0 ,  &&0 ,  &&0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,OO  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  &&0 ,    0 ,    0 ,  &&0 ,    0 ,  &&0 ,    0 ,  &&0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  &&0 ,    0 ,  &&0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,  %%0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,xx  0 ,xx  0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    01,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    01,    00,    01,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  %%0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    01,    00,  **0 ,oo  00,    01,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    01,    00,    01,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+0=Oh no...
+1=Someone set us a bomb!
+5=All your base are belong to us!
+>--------------------
+name=Reactor.
+password=Hey!
+background=./img/bg-stones.jpg
+,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,    0 ,XX  0 ,  ++0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,    0 ,XX  0 ,xx  0 ,XX  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,xx  0 ,    0 ,XX  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,  %%0 ,xx  0 ,xx  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,    0 ,    0 ,xx  0 ,xx  0 ,    0 ,    0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,    0 ,oo  0 ,xx  0 ,xx  0 ,OO  0 ,    0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,cc  0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,XX  0 ,  ##0 ,  ##0 ,  ##0 ,cc  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,XX  0 ,  ##0 ,  ##0 ,  ##0 ,cc  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,    0 ,oo  0 ,xx  0 ,xx  0 ,OO  0 ,    0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ##0 ,    0 ,    0 ,xx  0 ,xx  0 ,    0 ,    0 ,  ##0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,  ##0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,  %%0 ,xx  0 ,xx  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 
+,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,XX  0 ,    0 ,XX  0 ,    0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  **0 ,XX  0 ,    0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,    0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 
+>--------------------
+name=Rat race.
+password=ItHurts!
+background=./img/bg-stones.jpg
+,  &&8 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,oo&&0 ,  **0 ,oo&&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,XX  0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,XX  0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 ,OO&&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 ,  %%0 ,  %%0 ,OO&&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 ,  %%0 ,  %%0 ,OO&&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 ,OO&&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,xx  0 ,  &&0 ,xx  0 ,  &&0 ,  &&0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 
+,XX  0 ,  &&0 ,XX  0 ,  &&0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,xx  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,XX  0 
+,XX  0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 
+,XX  0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,xx  0 ,xx  0 ,XX  0 ,oo&&0 ,  &&0 ,oo&&0 ,XX  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 
+,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  ++0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 
+>--------------------
+name=Shooting range
+password=obstruct
+background=./img/bg.jpg
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,  **0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,XX  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,XX  0 
+,XX  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,XX  0 
+,XX  0 ,cc  0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,    0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,XX  0 
+,XX  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,    0 ,cc  0 ,cc  0 ,cc  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,XX  0 ,cc&&0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc&&0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc&&0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,XX  0 
+,XX  0 ,cc&&0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc&&0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc&&0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,cc  0 ,XX  0 
+,XX  0 ,cc&&0 ,XX  0 ,cc  0 ,XX  0 ,cc  0 ,XX  0 ,cc&&0 ,XX  0 ,cc  0 ,XX  0 ,cc  0 ,XX  0 ,cc&&0 ,XX  0 ,cc  0 ,XX  0 ,cc  0 ,XX  0 ,XX  0 
+,XX  0 ,  &&00,cc@@0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,XX  0 
+,XX  0 ,cc&&0 ,  &&0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,XX  0 
+,XX  0 ,  &&0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,    0 ,cc  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,cc  0 ,    0 ,cc  0 ,  @@0 ,cc  0 ,    0 ,cc  0 ,  @@0 ,cc  0 ,    0 ,cc  0 ,  @@0 ,cc  0 ,    0 ,cc  0 ,    0 ,XX  0 
+,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 
+,XX  0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,BB  0 ,    0 ,  ++0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+0=Hmm, this crate is labeled: Don't move!
+>--------------------
+name=Hatchery
+password=bemocide
+background=./img/bg-sector.jpg
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,XX  0 ,  **0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,XX  0 
+,XX  0 ,    0 ,oo  0 ,    0 ,XX  0 ,oo  0 ,    0 ,    0 ,XX  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,XX  0 
+,XX  0 ,oo  0 ,    0 ,oo  0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,XX  0 
+,XX  0 ,    0 ,oo  0 ,    0 ,XX  0 ,oo  0 ,oo  0 ,    0 ,XX  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,XX  0 
+,XX  0 ,    0 ,oo  0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,XX  0 
+,XX  0 ,    0 ,oo  0 ,    0 ,XX  0 ,oo  0 ,oo  0 ,oo  0 ,XX  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,  TT0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,XX  0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,XX  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,XX  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,    0 ,    0 ,XX  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,oo  0 ,    0 ,oo  0 ,    0 ,XX  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,oo  0 ,BB  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,oo  0 ,oo  0 ,BB  0 ,oo  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,XX  0 ,XX  0 ,oo  0 ,oo  0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,XX  0 ,    0 ,oo  0 ,    0 ,oo  0 ,    0 ,    0 ,XX  0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,XX  0 
+,XX  0 ,    0 ,    0 ,XX  0 ,    0 ,    0 ,    0 ,    0 ,    0 ,    0 ,XX  0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,  ++0 ,XX  0 
+,XX  0 ,    0 ,    0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,XX  0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  TT0 ,XX  0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+>--------------------
+name=This level sux
+password=Beavis
+background=./img/bg-plate.jpg
+,    0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 
+,    0 ,    01,    01,    01,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,oo&&08,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,XX  0 ,  &&0 
+,    0 ,    00,    00,    00,xx  0 ,xx  0 ,xx  0 ,xx  0 ,BB##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,BB&&09,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  ++0 ,XX  0 ,  &&0 
+,    0 ,oo  0 ,oo  0 ,oo  0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,    0 ,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  TT0 ,  ##0 ,BB##0 ,  ##0 ,  ##0 ,  ##0 ,OO&&06,OO&&0 ,OO&&0 ,    0 ,XX  0 ,  &&0 
+,  **0 ,    02,    02,    02,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,OO  0 ,OO&&0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,    0 ,    0 ,    0 
+,    0 ,    03,    03,    03,xx  0 ,xx  0 ,xx  0 ,xx  0 ,BB##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 
+,    0 ,    04,    04,    04,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 ,XX  0 ,XX  0 
+,    0 ,    04,    05,    05,xx%%0 ,xx  0 ,xxTT0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,OO&&0 ,OO&&0 
+,    0 ,    04,    04,    04,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,XX  0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  @@0 ,XX  0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx  0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  &&0 
+,    0 ,    0 ,    0 ,    0 ,xx%%0 ,xx  0 ,xx  0 ,xx  0 ,  ##0 ,  ##0 ,  &&0 ,xx  07,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 ,  &&0 
+0=This sux...
+1=Even suck is not enough to describe this crap...
+2=Whoa! Are you there???
+3=Nothing's here... Where is the TELEPORT!!!
+4=Is this the heaven?
+5=Cool! This is the right place to die!
+6=Be carefull!
+7=Come on!
+8=Fire! Fire! Fire!
+9=HoooooooooRRRRRRRRRRRAY!
+>--------------------
+name=Shameless self-promotion.
+password=Fin
+background=./img/bg-dirt.jpg
+,xx  0 ,oo  0 ,BB&&0 ,BB  0 ,oo  0 ,oo  0 ,OO  0 ,BB  0 ,oo  0 ,oo  0 ,BB&&0 ,oo  0 ,oo  0 ,  &&0 ,oo&&0 ,oo  0 ,oo  0 ,oo  0 ,  &&0 ,xx  0 
+,oo  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,oo  0 ,XX  0 ,xx  0 ,OO  0 ,oo  0 ,oo  0 ,oo  0 ,BB&&0 ,oo  0 ,oo&&0 ,OO  0 ,xx  0 ,xx  0 ,oo  0 
+,OO  0 ,xx  0 ,oo  0 ,XX  0 ,xx  0 ,oo  0 ,xx  0 ,XX  0 ,OO  0 ,xx  0 ,oo&&0 ,oo  0 ,xx  0 ,oo  0 ,oo  0 ,xx  0 ,oo  0 ,oo  0 ,xx  0 ,OO  0 
+,  &&0 ,oo&&0 ,xx  0 ,XX  0 ,xx  0 ,OO&&0 ,OO&&0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,OO  0 ,xx  0 ,XX  0 ,XX  0 ,xx  0 ,oo  0 ,BB&&0 ,oo  0 ,oo&&0 
+,xx  0 ,xx  0 ,oo  0 ,XX  0 ,xx  0 ,xx  0 ,oo  0 ,XX  0 ,xx  0 ,OO  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,BB  0 ,oo  0 ,OO  0 ,BB  0 
+,oo&&0 ,OO  0 ,  &&0 ,XX  0 ,xx  0 ,OO  0 ,xx  0 ,XX  0 ,oo  0 ,xx  0 ,XX  0 ,oo  0 ,XX  0 ,oo  0 ,oo  0 ,OO&&0 ,oo  0 ,oo  0 ,xx  0 ,oo  0 
+,  &&0 ,xx  0 ,oo  0 ,XX  0 ,xx  0 ,oo  0 ,xx  0 ,XX  0 ,xx  0 ,OO&&0 ,XX  0 ,BB  0 ,oo  0 ,XX  0 ,XX  0 ,XX  0 ,OO  0 ,oo  0 ,BB  0 ,OO&&0 
+,xx  0 ,oo&&0 ,xx  0 ,oo  0 ,OO  0 ,oo  0 ,oo  0 ,OO&&0 ,oo  0 ,xx  0 ,xx  0 ,xx  0 ,OO  0 ,oo  0 ,oo  0 ,oo  0 ,  &&0 ,BB&&0 ,oo  0 ,oo  0 
+,  &&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,  &&0 ,OO&&0 ,XX  0 ,XX  0 ,BB  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,OO  0 ,BB  0 
+,oo&&0 ,XX  0 ,XX  0 ,xx  0 ,xx  0 ,xx  0 ,OO  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,oo  0 ,oo  0 ,XX  0 ,xx  0 
+,xx  0 ,XX  0 ,XX  0 ,xx  0 ,oo  0 ,oo&&0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,oo  0 ,xx  0 ,XX  0 ,XX  0 
+,xx  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,oo&&0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XXTT0 ,OO  0 ,BB&&0 ,XX  0 ,XX  0 
+,OO  0 ,XX  0 ,XX  0 ,oo&&0 ,xx  0 ,xx  0 ,OO  0 ,XX  0 ,XX  0 ,xx  0 ,XX  0 ,XX  0 ,XX  0 ,OO  0 ,XX  0 ,XX  0 ,xx  0 ,OO  0 ,XX  0 ,XX  0 
+,oo  0 ,XX  0 ,XX  0 ,xx  0 ,OO  0 ,xx  0 ,oo  0 ,XX  0 ,XX  0 ,oo&&0 ,OO  0 ,XX  0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,xx  0 ,OO  0 ,XX  0 ,XX  0 
+,BB  0 ,XX  0 ,XX  0 ,oo  0 ,xx  0 ,oo  0 ,xx  0 ,XX  0 ,XX  0 ,xx  0 ,oo  0 ,XX  0 ,XX  0 ,OO&&0 ,XX  0 ,XX  0 ,BB&&0 ,xx  0 ,XX  0 ,XX  0 
+,OO  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,oo  0 ,XX  0 ,XX  0 ,OO  0 ,xx  0 ,XX  0 ,XX  0 ,xx&&0 ,XX  0 ,XX  0 ,XXTT0 ,XX  0 ,XX  0 ,xx  0 
+,oo&&0 ,oo&&0 ,OO  0 ,oo&&0 ,  &&0 ,oo&&0 ,xx&&0 ,  &&0 ,oo&&0 ,xx  0 ,oo  0 ,OO&&0 ,xx&&0 ,xx&&0 ,OO&&0 ,oo  0 ,OO  0 ,oo&&0 ,oo  0 ,OO  4 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+,  TT0 ,  ##04,  ##0 ,  ##03,  ##0 ,  ##02,  ##0 ,  ##01,  ##0 ,  ##00,  ##0 ,  ##01,  ##0 ,  ##02,  ##0 ,  ##03,  ##0 ,  ##04,  ##0 ,  TT0 
+,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,  **0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 ,XX  0 
+0=Levels created by:
+1=Wendigo
+2=JayDee
+3=and
+4=arTee

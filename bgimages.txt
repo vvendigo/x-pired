@@ -1,0 +1,9 @@
+./img/bg.jpg
+./img/bg-dirt.jpg
+./img/bg-tek.jpg
+./img/bg-sector.jpg
+./img/bg-plate.jpg
+./img/bg-stone.jpg
+./img/bg-stones.jpg
+./img/bg-metal.jpg
+./img/bg-organic.jpg

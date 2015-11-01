@@ -1,0 +1,18 @@
+VERSION 1.22
+(Hope it works, not tested!)
+
+Instalation notes
+-----------------
+
+You need to have SDL, SDL_gfx, SDL_mixer and SDL_image installed (check path
+to includes and libs in Makefile).
+
+To build from source, check PREFIX in Makefile and type
+
+# make
+# make install
+
+
+Binaries (xpired, xpiredit) go into PREFIX/bin, data into PREFIX/share/xpired.
+On the first run, xpired creates .xpired directory in your HOME, where it
+stores your xpired.cfg and xpired.dmo (saved demo).
